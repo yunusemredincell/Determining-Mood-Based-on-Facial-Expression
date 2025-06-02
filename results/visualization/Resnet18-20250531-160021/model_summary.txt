@@ -1,0 +1,33 @@
+=================================================================
+Layer (type:depth-idx)                   Param #
+=================================================================
+├─ResNet: 1-1                            --
+|    └─Conv2d: 2-1                       9,408
+|    └─BatchNorm2d: 2-2                  128
+|    └─ReLU: 2-3                         --
+|    └─MaxPool2d: 2-4                    --
+|    └─Sequential: 2-5                   --
+|    |    └─BasicBlock: 3-1              73,984
+|    |    └─BasicBlock: 3-2              73,984
+|    └─Sequential: 2-6                   --
+|    |    └─BasicBlock: 3-3              230,144
+|    |    └─BasicBlock: 3-4              295,424
+|    └─Sequential: 2-7                   --
+|    |    └─BasicBlock: 3-5              919,040
+|    |    └─BasicBlock: 3-6              1,180,672
+|    └─Sequential: 2-8                   --
+|    |    └─BasicBlock: 3-7              3,673,088
+|    |    └─BasicBlock: 3-8              4,720,640
+|    └─AdaptiveAvgPool2d: 2-9            --
+|    └─Sequential: 2-10                  --
+|    |    └─Linear: 3-9                  131,328
+|    |    └─ReLU: 3-10                   --
+|    |    └─BatchNorm1d: 3-11            512
+|    |    └─Dropout: 3-12                --
+|    |    └─Linear: 3-13                 1,799
+=================================================================
+Total params: 11,310,151
+Trainable params: 11,310,151
+Non-trainable params: 0
+=================================================================
+Test Accuracy: 61.30%

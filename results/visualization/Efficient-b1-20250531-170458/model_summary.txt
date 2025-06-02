@@ -1,0 +1,27 @@
+======================================================================
+Layer (type:depth-idx)                        Param #
+======================================================================
+├─EfficientNet: 1-1                           --
+|    └─Sequential: 2-1                        --
+|    |    └─Conv2dNormActivation: 3-1         928
+|    |    └─Sequential: 3-2                   2,060
+|    |    └─Sequential: 3-3                   27,424
+|    |    └─Sequential: 3-4                   77,930
+|    |    └─Sequential: 3-5                   345,830
+|    |    └─Sequential: 3-6                   751,720
+|    |    └─Sequential: 3-7                   2,614,300
+|    |    └─Sequential: 3-8                   2,280,832
+|    |    └─Conv2dNormActivation: 3-9         412,160
+|    └─AdaptiveAvgPool2d: 2-2                 --
+|    └─Sequential: 2-3                        --
+|    |    └─Linear: 3-10                      163,968
+|    |    └─ReLU: 3-11                        --
+|    |    └─BatchNorm1d: 3-12                 256
+|    |    └─Dropout: 3-13                     --
+|    |    └─Linear: 3-14                      903
+======================================================================
+Total params: 6,678,311
+Trainable params: 6,678,311
+Non-trainable params: 0
+======================================================================
+Test Accuracy:59.19%
