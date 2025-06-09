@@ -1,3 +1,4 @@
+import torch
 from classifier import FacialExpressionClassifier
 from models.transfer_learning import (
     FacialExpressionResnetNN,
@@ -29,6 +30,9 @@ def main():
     evaluator.plot_class_distribution(validation_loader, "validation")
     evaluator.evaluate(classifier.model, test_loader, history=history)
 
+    classifier.model.eval()
+    scripted_model = torch.jit.script(classifier.model)
+    scripted_model.save("results/models/lightweight_model.pt")
 
 if __name__ == "__main__":
     main()
